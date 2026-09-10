@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Juan Sebastián Bermúdez Vélez — Analista de datos</title>
+<meta name="description" content="Analista de datos e ingeniero electrónico. Automatización de flujos de datos, extracción documental y tableros para el sector de tierras y petróleo en Estados Unidos.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --papel:#fbfaf7;
+    --tinta:#16213a;
+    --grafito:#5a6478;
+    --linea:#dcd8cf;
+    --acento:#0f766e;
+    --resalte:#ffd23f;
+    --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+    --texto:"Newsreader",Georgia,"Times New Roman",serif;
+  }
+
+  *{box-sizing:border-box}
+
+  html{-webkit-text-size-adjust:100%}
+
+  body{
+    margin:0;
+    background:var(--papel);
+    color:var(--tinta);
+    font-family:var(--texto);
+    font-size:1.0625rem;
+    line-height:1.65;
+    font-variant-numeric:tabular-nums;
+  }
+
+  .envoltura{max-width:74rem;margin:0 auto;padding:0 1.5rem}
+
+  a{color:var(--tinta);text-decoration-color:var(--linea);text-decoration-thickness:1px;text-underline-offset:3px}
+  a:hover{text-decoration-color:var(--acento)}
+  :focus-visible{outline:2px solid var(--acento);outline-offset:3px;border-radius:2px}
+
+  h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-0.015em;line-height:1.1;margin:0}
+
+  /* ---------- Portada: encabezado de informe ---------- */
+  .portada{padding:5.5rem 0 3rem;border-bottom:1px solid var(--linea)}
+
+  .portada h1{font-size:clamp(2.6rem,7vw,4.75rem)}
+
+  .lema{
+    font-size:clamp(1.15rem,2.4vw,1.5rem);
+    max-width:42ch;
+    margin:1.25rem 0 0;
+    color:var(--tinta);
+  }
+  /* El resaltado se traza al cargar: el único movimiento de la página.
+     Sin soporte para @property, --ancho no resuelve y se muestra completo. */
+  @property --ancho{syntax:'<length-percentage>';inherits:false;initial-value:0%}
+
+  .lema em{
+    font-style:normal;
+    padding:0 .12em;
+    background:linear-gradient(var(--resalte),var(--resalte)) no-repeat 0 0.15em/var(--ancho,100%) 0.85em;
+    animation:trazo .7s .35s ease-out forwards;
+  }
+
+  @keyframes trazo{to{--ancho:100%}}
+
+  .ficha{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));
+    gap:1.5rem 2.5rem;
+    margin:3rem 0 0;
+    padding:0;
+  }
+  .ficha div{border-top:2px solid var(--tinta);padding-top:.6rem}
+  .ficha dt{font-family:var(--display);font-size:.8rem;font-weight:500;color:var(--grafito);margin:0}
+  .ficha dd{margin:.2rem 0 0;font-size:1.0625rem}
+  .ficha .libre dt{color:var(--acento)}
+
+  /* ---------- Proyectos ---------- */
+  .seccion{padding:4.5rem 0;border-bottom:1px solid var(--linea)}
+  .seccion h2{font-size:clamp(1.6rem,3.2vw,2.2rem)}
+  .intro{color:var(--grafito);max-width:58ch;margin:.75rem 0 2.5rem}
+
+  table{width:100%;border-collapse:collapse;text-align:left}
+  thead th{
+    font-family:var(--display);font-weight:500;font-size:.8rem;color:var(--grafito);
+    padding:0 1rem .6rem 0;border-bottom:1px solid var(--linea);vertical-align:bottom;
+  }
+  tbody td{padding:1.4rem 1rem 1.4rem 0;border-bottom:1px solid var(--linea);vertical-align:top}
+  tbody tr:hover td{background:rgba(15,118,110,.035)}
+
+  .nombre{font-family:var(--display);font-weight:700;font-size:1.15rem;line-height:1.25;display:block}
+  .nombre a{text-decoration:none}
+  .nombre a:hover{text-decoration:underline;text-decoration-color:var(--acento)}
+  .pregunta{color:var(--grafito);max-width:32ch}
+  .stack{font-size:.95rem;color:var(--grafito);max-width:16ch}
+  .resultado{max-width:34ch}
+  .resultado b{
+    font-weight:500;
+    background:linear-gradient(var(--resalte),var(--resalte)) no-repeat 0 0.1em/100% 0.8em;
+    padding:0 .15em;
+  }
+
+  /* ---------- Cómo trabajo ---------- */
+  .metodo{display:grid;gap:2.5rem;grid-template-columns:repeat(auto-fit,minmax(17rem,1fr));margin:0}
+  .metodo h3{font-size:1.1rem;margin-bottom:.4rem}
+  .metodo p{margin:0;color:var(--grafito);max-width:38ch}
+  .metodo div{border-left:2px solid var(--acento);padding-left:1.25rem}
+
+  /* ---------- Contacto ---------- */
+  .contacto{padding:4.5rem 0 6rem}
+  .contacto p{max-width:46ch;color:var(--grafito);margin:.75rem 0 2rem}
+  .boton{
+    display:inline-block;font-family:var(--display);font-weight:500;font-size:1rem;
+    background:var(--tinta);color:var(--papel);padding:.85rem 1.6rem;border-radius:3px;
+    text-decoration:none;
+  }
+  .boton:hover{background:var(--acento)}
+  .enlaces{list-style:none;display:flex;flex-wrap:wrap;gap:1.75rem;padding:0;margin:2rem 0 0;font-size:1rem}
+
+  footer{border-top:1px solid var(--linea);padding:1.75rem 0;font-size:.9rem;color:var(--grafito)}
+
+  /* ---------- Móvil: la tabla se apila ---------- */
+  @media (max-width:44rem){
+    .portada{padding-top:3.5rem}
+    thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+    tbody tr{display:block;border-bottom:1px solid var(--linea);padding:1.5rem 0}
+    tbody tr:last-child{border-bottom:none}
+    tbody td{display:block;border:none;padding:0 0 .5rem}
+    tbody td:last-child{padding-bottom:0}
+    tbody td[data-campo]::before{
+      content:attr(data-campo);
+      display:block;font-family:var(--display);font-size:.75rem;color:var(--grafito);margin-bottom:.15rem;
+    }
+    .pregunta,.stack,.resultado{max-width:none}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    .lema em{animation:none;background-size:100% 0.85em}
+  }
+</style>
+</head>
+<body>
+
+<header class="portada">
+  <div class="envoltura">
+    <h1>Juan Sebastián<br>Bermúdez Vélez</h1>
+    <p class="lema">Analista de datos. Trabajo con los datos que <em>nadie quiere tocar</em> —escaneos, runsheets sin formato, estados de cuenta de ocho operadores— y construyo las herramientas que los vuelven consultables.</p>
+
+    <dl class="ficha">
+      <div>
+        <dt>Rol</dt>
+        <dd>Analista de datos · ingeniero electrónico</dd>
+      </div>
+      <div>
+        <dt>Experiencia</dt>
+        <dd>4 años construyendo soluciones de datos para el mercado estadounidense</dd>
+      </div>
+      <div>
+        <dt>Herramientas</dt>
+        <dd>Python, SQL avanzado, Power BI, geopandas, AWS y Azure, Apps Script</dd>
+      </div>
+      <div>
+        <dt>Formación</dt>
+        <dd>Ingeniería Electrónica, Universidad El Bosque · mejor promedio de la facultad</dd>
+      </div>
+      <div>
+        <dt>Ubicación</dt>
+        <dd>Bogotá, Colombia · remoto · español, inglés y francés</dd>
+      </div>
+      <div class="libre">
+        <dt>Disponibilidad</dt>
+        <dd>Abierto a puestos y a proyectos por encargo</dd>
+      </div>
+    </dl>
+  </div>
+</header>
+
+<main>
+  <section class="seccion">
+    <div class="envoltura">
+      <h2>Proyectos</h2>
+      <p class="intro">Ocho proyectos en producción, con el código y el razonamiento detrás de cada decisión. Los datos son de clientes y no se publican; dos proyectos incluyen datos sintéticos para poder probarlos.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Proyecto</th>
+            <th scope="col">Problema</th>
+            <th scope="col">Herramientas</th>
+            <th scope="col">Resultado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-campo="Proyecto">
+              <span class="nombre"><a href="proyectos/01-normalizador-titulos">Normalizador de runsheets y títulos</a></span>
+            </td>
+            <td data-campo="Problema" class="pregunta">¿Cómo cargar cientos de runsheets con encabezados distintos sin transcribirlos a mano?</td>
+            <td data-campo="Herramientas" class="stack">Python, pandas, pdfplumber</td>
+            <td data-campo="Resultado" class="resultado"><b>2.900 líneas, tres formatos de entrada</b>. Resuelve alias de columnas, libro-página combinado y filas partidas, y nunca deja un otorgante en blanco: lo marca y lo reporta contra su documento de origen.</td>
+          </tr>
+          <tr>
+            <td data-campo="Proyecto">
+              <span class="nombre"><a href="proyectos/02-check-stubs-revenue">Check stubs y consolidación de revenue</a></span>
+            </td>
+            <td data-campo="Problema" class="pregunta">¿Qué intereses estamos cobrando en cada pozo, y coinciden con los division orders?</td>
+            <td data-campo="Herramientas" class="stack">Python, pdfplumber, openpyxl</td>
+            <td data-campo="Resultado" class="resultado"><b>763.000 filas, cinco fuentes, 3.441 tracts</b>. Ocho formatos de operador extraídos de PDF, con 99,6% de cobertura de division order y el nivel de confianza marcado en cada dato.</td>
+          </tr>
+          <tr>
+            <td data-campo="Proyecto">
+              <span class="nombre"><a href="proyectos/03-dashboard-geoespacial">Dashboard geoespacial de leasehold</a></span>
+            </td>
+            <td data-campo="Problema" class="pregunta">¿Qué pozos caen dentro de nuestros arrendamientos y cuáles vencen pronto?</td>
+            <td data-campo="Herramientas" class="stack">geopandas, MapLibre</td>
+            <td data-campo="Resultado" class="resultado"><b>Un archivo HTML, sin instalar nada</b>. Join punto-en-polígono que conserva todos los leases coincidentes, con filtros cruzados. <a href="proyectos/03-dashboard-geoespacial/demo/">Ver la demo</a>.</td>
+          </tr>
+          <tr>
+            <td data-campo="Proyecto">
+              <span class="nombre"><a href="proyectos/04-ocr-documentos">OCR por lotes de documentos</a></span>
+            </td>
+            <td data-campo="Problema" class="pregunta">¿Cómo buscar texto en miles de escrituras escaneadas sin transcribirlas?</td>
+            <td data-campo="Herramientas" class="stack">PyMuPDF, Tesseract</td>
+            <td data-campo="Resultado" class="resultado"><b>PDF buscables, imagen intacta</b>. Capa de texto invisible sobre el escaneo, con rotación automática y registro por archivo de lo que falló.</td>
+          </tr>
+          <tr>
+            <td data-campo="Proyecto">
+              <span class="nombre"><a href="proyectos/05-asana-manager">Asana Manager</a></span>
+            </td>
+            <td data-campo="Problema" class="pregunta">¿Cómo montar proyectos de cliente sin crear cientos de tareas una por una?</td>
+            <td data-campo="Herramientas" class="stack">Python, tkinter, API de Asana</td>
+            <td data-campo="Resultado" class="resultado"><b>Instalador, no script</b>. Importación desde Excel y operaciones masivas en paralelo, para un equipo que no abre la terminal.</td>
+          </tr>
+          <tr>
+            <td data-campo="Proyecto">
+              <span class="nombre"><a href="proyectos/06-landman-ai">Landman AI</a></span>
+            </td>
+            <td data-campo="Problema" class="pregunta">¿Se puede pasar de un escaneo a una fila capturada sin transcripción?</td>
+            <td data-campo="Herramientas" class="stack">Gemini, PyMuPDF</td>
+            <td data-campo="Resultado" class="resultado"><b>Las mismas 24 columnas</b> que el normalizador, extraídas del escaneo con aprendizaje por ejemplo y cascada de modelos. Pendiente: medir exactitud por campo.</td>
+          </tr>
+          <tr>
+            <td data-campo="Proyecto">
+              <span class="nombre"><a href="proyectos/07-availability-tracker">Availability Tracker</a></span>
+            </td>
+            <td data-campo="Problema" class="pregunta">¿Quién tiene capacidad esta semana y quién está saturado?</td>
+            <td data-campo="Herramientas" class="stack">Apps Script, Google Sheets</td>
+            <td data-campo="Resultado" class="resultado"><b>Siete formularios, un despliegue</b>. Calendario, tableros de capacidad y pronóstico a once días, documentado para que sobreviva a que su autor no esté.</td>
+          </tr>
+          <tr>
+            <td data-campo="Proyecto">
+              <span class="nombre"><a href="proyectos/08-utilidades-titulos">Utilidades de organización documental</a></span>
+            </td>
+            <td data-campo="Problema" class="pregunta">¿Cómo reconciliar miles de archivos repartidos en tres convenciones de nombres?</td>
+            <td data-campo="Herramientas" class="stack">Python, pandas, plotly</td>
+            <td data-campo="Resultado" class="resultado"><b>Nueve notebooks, una tarea cada uno</b>: buscar, aplanar, combinar tablas con encabezados no estándar y reorganizar carpetas por deal o por libro-página.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="seccion">
+    <div class="envoltura">
+      <h2>Cómo trabajo</h2>
+      <p class="intro">Tres cosas que aplico en todos los proyectos de esta página.</p>
+
+      <div class="metodo">
+        <div>
+          <h3>Datos que llegan mal</h3>
+          <p>Ninguna de estas fuentes venía limpia: ocho formatos de estado de cuenta, encabezados distintos en cada runsheet, escaneos sin capa de texto. El trabajo empieza ahí, no en el análisis.</p>
+        </div>
+        <div>
+          <h3>Lo dudoso se marca</h3>
+          <p>Un campo ilegible nunca se rellena en silencio: se marca y se reporta con el archivo y la fila de origen, para poder verificarlo contra el documento. En cadena de título, un dato inventado cuesta más que un dato faltante.</p>
+        </div>
+        <div>
+          <h3>Herramientas, no scripts</h3>
+          <p>Varias de estas herramientas las usa a diario gente que no abre una terminal. Por eso hay instaladores, formularios web y documentación escrita para quien tenga que mantenerlas sin haberlas construido.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contacto">
+    <div class="envoltura">
+      <h2>Hablemos</h2>
+      <p>Si tienes un proceso que consume horas cada semana —captura manual, PDF que alguien transcribe, reportes que se arman a mano— cuéntame cómo es hoy y te digo qué se puede automatizar.</p>
+      <a class="boton" href="mailto:jsbermudezv@gmail.com">Escríbeme</a>
+      <ul class="enlaces">
+        <li><a href="mailto:jsbermudezv@gmail.com">jsbermudezv@gmail.com</a></li>
+        <li><a href="https://linkedin.com/in/jsbermudezv">LinkedIn</a></li>
+        <li><a href="https://github.com/jsbermudezv">GitHub</a></li>
+        <li><a href="proyectos/03-dashboard-geoespacial/demo/">Demo del dashboard</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="envoltura">Código y datos de cada proyecto en <a href="https://github.com/jsbermudezv/portafolio">github.com/jsbermudezv/portafolio</a></div>
+</footer>
+
+</body>
+</html>

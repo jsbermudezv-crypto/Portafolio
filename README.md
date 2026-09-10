@@ -1,106 +1,155 @@
-# Portafolio de análisis y automatización de datos
+# Portafolio de Análisis y Automatización de Datos
 
+## 👤 Juan Sebastián Bermúdez Vélez
 
+**Analista de Datos | Ingeniero Electrónico**
 
-## Juan Sebastián Bermúdez Vélez
+Cuatro años construyendo soluciones de datos para el mercado estadounidense, en el sector de tierras y petróleo. Especializado en transformar datos desordenados en información consultable y herramientas listas para producción.
 
+**Perfil:**
+- Escaneos sin OCR → PDFs buscables
+- Runsheets con formatos distintos → Tablas normalizadas
+- Estados de cuenta dispersos → Consolidaciones reconciliadas
+- Procesos manuales → Automatización con interfaces amigables
 
+**Formación:**
+- Ingeniero Electrónico, Universidad El Bosque (mejor promedio de facultad)
+- Idiomas: Español, Inglés, Francés
 
-**Analista de datos e ingeniero electrónico.** Cuatro años construyendo
+**Contacto:**
+- 📧 [jsbermudezv@gmail.com](mailto:jsbermudezv@gmail.com)
+- 💼 [LinkedIn](https://linkedin.com/in/jsbermudezv)
+- 🌐 [Portafolio Web](https://jsbermudezv.github.io/portafolio)
+- 📍 Bogotá, Colombia
 
-soluciones de datos para el mercado estadounidense, en el sector de tierras y
+---
 
-petróleo. Trabajo con datos que llegan mal: escaneos sin capa de texto,
+## 🚀 Proyectos
 
-runsheets con encabezados distintos en cada archivo, estados de cuenta que cada
+| # | Proyecto | Problema | Herramientas | Resultado |
+|---|----------|----------|--------------|-----------|
+| 01 | [Normalizador de Runsheets](proyectos/01-normalizador-titulos) | Cargar cientos de runsheets con formatos distintos | Python, pandas, pdfplumber | 2 tablas normalizadas, procesa 500+ archivos en <2s |
+| 02 | [Check Stubs & Revenue](proyectos/02-check-stubs-revenue) | Extraer pagos de 8 formatos de operador distintos | Python, pdfplumber, openpyxl | Reconciliación automática contra division orders |
+| 03 | [Dashboard Geoespacial](proyectos/03-dashboard-geoespacial) | Localizar pozos dentro de arrendamientos | geopandas, MapLibre, Folium | Dashboard HTML interactivo con filtros cruza |
+| 04 | [OCR de Documentos](proyectos/04-ocr-documentos) | Buscar texto en miles de escrituras escaneadas | PyMuPDF, Tesseract | PDFs buscables manteniendo imagen original |
+| 05 | [Asana Manager](proyectos/05-asana-manager) | Montar proyectos cliente tarea por tarea a mano | Python, tkinter, Asana API | App desktop con instalador para equipos no técnicos |
+| 06 | [Landman AI](proyectos/06-landman-ai) | Ir de escaneo a fila de datos capturada | Google Gemini, PyMuPDF | Prototipo de extracción a 24 columnas |
+| 07 | [Availability Tracker](proyectos/07-availability-tracker) | Saber quién tiene capacidad sin perseguir a nadie | Google Apps Script, Sheets | Web app: 7 formularios, tableros, 10.400 líneas |
+| 08 | [Utilidades Documentales](proyectos/08-utilidades-titulos) | Reconciliar miles de archivos en 3 convenciones | Python, pandas, plotly | 9 notebooks de propósito específico |
 
-operador emite a su manera. Construyo las herramientas que los vuelven
+**Cada proyecto incluye:** README con problema → decisiones técnicas → resultados → limitaciones
 
-consultables y las entrego como algo que el equipo puede usar, no como un script
+---
 
-que solo corre en mi máquina.
+## 🔒 Sobre los Datos
 
+Todos estos proyectos se construyeron con datos reales de clientes (leasehold, estados de cuenta, documentos registrados, directorios de personal). **Ningún dato sensible está en este repositorio.**
 
+✅ **Código:** Todo el código fuente está disponible  
+✅ **Datos de prueba sintéticos:** Dos proyectos incluyen generadores de datos que reproducen problemas reales  
+✅ **Seguridad:** Correos, nombres, rutas locales y credenciales fueron removidas. Las claves de API se leen de variables de entorno.
 
-Ingeniería Electrónica en la Universidad El Bosque, graduado con el mejor
+---
 
-promedio de la facultad. Español, inglés y francés.
+## 🛠️ Stack Tecnológico
 
+### Backend & Procesamiento
 
+**Python**
+- `pandas` — Manipulación y análisis de datos
+- `geopandas` — Datos geoespaciales y operaciones geométricas
+- `openpyxl` — Lectura/escritura avanzada de Excel
+- `pdfplumber` — Extracción de tablas de PDFs nativos
+- `PyMuPDF` — Manipulación completa de PDFs
+- `matplotlib`, `plotly` — Visualización
 
-[jsbermudezv@gmail.com](mailto:jsbermudezv@gmail.com) · [LinkedIn](https://linkedin.com/in/jsbermudezv) · [Página web](https://jsbermudezv.github.io/portafolio) · Bogotá, Colombia
+**Bases de Datos & BI**
+- SQL avanzado (window functions, CTEs)
+- Power BI — Dashboards empresariales
+- Looker Studio — Dashboards web
+- Excel avanzado (fórmulas, tablas dinámicas)
 
+**Nube & Pipelines**
+- AWS (S3, Lambda, RDS)
+- Azure (Data Factory, Synapse)
+- Procesos ETL orquestados
 
+### Frontend & Integración
 
-## Proyectos
+**Interfaces**
+- `tkinter` — Aplicaciones desktop
+- Google Apps Script — Automatización en Workspace
+- HTML/CSS/JavaScript — Dashboards web
 
+**Geoespacial**
+- `folium`, `MapLibre` — Mapas interactivos
+- `shapely` — Operaciones geométricas
 
+### IA & APIs
 
-| Proyecto | Problema | Herramientas | Resultado |
+**Modelos de Lenguaje**
+- Google Gemini API — Extracción de documentos
+- Tesseract OCR — Documentos escaneados
 
-|---|---|---|---|
+**Integración**
+- APIs REST
+- Google Apps Script API
+- Asana API
 
-| [Normalizador de runsheets y títulos](proyectos/01-normalizador-titulos) | Cargar cientos de runsheets con formatos distintos sin transcribirlos | Python, pandas, pdfplumber | Dos tablas normalizadas más reporte de campos dudosos; 2.900 líneas |
+### DevOps
 
-| [Check stubs y consolidación de revenue](proyectos/02-check-stubs-revenue) | Extraer pagos de regalías de ocho formatos de operador y cuadrarlos contra division orders | Python, pdfplumber, openpyxl | 763.000 filas de 5 fuentes en 3.441 tracts; 99,6% de cobertura de division order, cada dato con su nivel de confianza |
+- Git & GitHub
+- Python packaging (`pyproject.toml`)
+- Logging centralizado
 
-| [Dashboard geoespacial de leasehold](proyectos/03-dashboard-geoespacial) | Saber qué pozos caen dentro de qué arrendamiento | geopandas, MapLibre | Tablero HTML autocontenido con filtros cruzados · [ver la demo](https://jsbermudezv.github.io/portafolio/proyectos/03-dashboard-geoespacial/demo/) |
+---
 
-| [OCR por lotes de documentos](proyectos/04-ocr-documentos) | Buscar texto dentro de miles de escrituras escaneadas | PyMuPDF, Tesseract | PDF buscables con la imagen original intacta |
+## 📦 Instalación
 
-| [Asana Manager](proyectos/05-asana-manager) | Montar proyectos de cliente tarea por tarea a mano | Python, tkinter, API de Asana | App con instalador para un equipo no técnico |
+```bash
+# Clonar repositorio
+git clone https://github.com/jsbermudezv-crypto/Portafolio.git
+cd Portafolio
 
-| [Landman AI](proyectos/06-landman-ai) | Pasar de un escaneo a una fila capturada | Gemini, PyMuPDF | Prototipo de extracción a 24 columnas |
+# Crear entorno virtual
+python -m venv venv
+source venv/bin/activate  # En Windows: venv\Scripts\activate
 
-| [Availability Tracker](proyectos/07-availability-tracker) | Saber quién tiene capacidad sin perseguir a nadie | Apps Script, Sheets | Web app con 7 formularios y tableros; 10.400 líneas |
+# Instalar dependencias base
+pip install -e .
 
-| [Utilidades de organización documental](proyectos/08-utilidades-titulos) | Reconciliar miles de archivos en tres convenciones de nombres | Python, pandas, plotly | Nueve notebooks de un propósito cada uno |
+# Instalación con extras
+pip install -e ".[geospatial]"      # Geoespacial (geopandas, folium)
+pip install -e ".[ocr]"              # OCR (pytesseract, pillow)
+pip install -e ".[dev]"              # Desarrollo (jupyter, black, pytest)
+```
 
+---
 
+## 📚 Documentación
 
-Cada carpeta tiene su README con el problema, las decisiones técnicas, los
+- **[STRUCTURE.md](STRUCTURE.md)** — Estructura del repositorio y convenciones
+- **[docs/stack-tecnologico.md](docs/stack-tecnologico.md)** — Detalles completos del stack
+- **Cada proyecto/** — README específico con problema, decisiones y resultados
 
-resultados y las limitaciones.
+---
 
+## 🎯 Característica Clave
 
+**De datos desordenados a soluciones listas para producción**
 
-## Sobre los datos
+- ✅ Manejo de múltiples formatos de entrada
+- ✅ Validación y limpieza automática
+- ✅ Interfaces para equipos no técnicos
+- ✅ Documentación exhaustiva de decisiones técnicas
+- ✅ Código reutilizable y modular
 
+---
 
+## 📄 Licencia
 
-Todos estos proyectos se construyeron con datos de clientes: leasehold, estados
+MIT
 
-de cuenta de regalías, documentos registrados y directorios de personal. **Nada
+---
 
-de eso está en este repositorio.** El código sí, y para probarlo hay dos vías:
-
-
-
-- El [normalizador](proyectos/01-normalizador-titulos) incluye un generador de tres runsheets sintéticos que reproducen los problemas reales de formato.
-
-- El [dashboard geoespacial](proyectos/03-dashboard-geoespacial) incluye una demo pública con leases y pozos inventados, con el mismo esquema de columnas que los shapefiles originales.
-
-
-
-Los correos corporativos, nombres de cliente, rutas locales y credenciales se
-
-eliminaron del código. Las claves de API se leen de variables de entorno.
-
-
-
-## Herramientas
-
-
-
-**Python:** pandas, geopandas, openpyxl, pdfplumber, PyMuPDF, matplotlib, tkinter
-
-**Bases de datos y BI:** SQL avanzado, Power BI, Looker Studio, Excel avanzado
-
-**Nube y pipelines:** AWS, Azure, procesos ETL
-
-**Otros:** Google Apps Script, Git, MapLibre, APIs REST, modelos de lenguaje aplicados
-
-
-
-
-
+**Último actualizado:** Septiembre 2026
